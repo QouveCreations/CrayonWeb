@@ -11,7 +11,7 @@ import {
 export const contentCreators = [
   {
     name: "Karma",
-    nickname: "@karma2121",
+    nickname: "karma2121",
     role: "Streamer",
     image: "/media/team-pf/karma.png",
     quote: "Open for collabs",
@@ -26,7 +26,7 @@ export const contentCreators = [
   },
   {
     name: "Kansy",
-    nickname: "@kansy",
+    nickname: "kansy",
     role: "Streamer",
     image: "/media/streamer-pf/Kansy.png",
     quote: "I am a bear 🐻",
@@ -41,7 +41,7 @@ export const contentCreators = [
   },
   {
     name: "Giannicraft",
-    nickname: "@Giannicrafter",
+    nickname: "Giannicrafter",
     role: "Streamer",
     image: "/media/streamer-pf/GianniCrafter.png",
     quote: "I am a femboy who likes trains",
@@ -54,14 +54,14 @@ export const contentCreators = [
       },
       {
         icon: Youtube,
-        url: "https://www.youtube.com/@Giannicrafter",
+        url: "https://www.youtube.com/Giannicrafter",
         label: "YouTube",
       },
     ],
   },
   {
     name: "Liondro",
-    nickname: "@Liondro_tv",
+    nickname: "Liondro_tv",
     role: "Streamer",
     image: "/media/streamer-pf/Liondro.png",
     quote: "A guy with a mask",
@@ -74,14 +74,14 @@ export const contentCreators = [
       },
       {
         icon: Youtube,
-        url: "https://youtube.com/@liondrovt?si=g6aRVpt1HR1m-frj",
+        url: "https://youtube.com/liondrovt?si=g6aRVpt1HR1m-frj",
         label: "YouTube",
       },
     ],
   },
   {
     name: "R1okano",
-    nickname: "@riokano",
+    nickname: "riokano",
     role: "Streamer",
     image: "/media/streamer-pf/R1okano.png",
     quote: "A fluffy guy on Twitch",
@@ -96,7 +96,7 @@ export const contentCreators = [
   },
   {
     name: "Shadow_CatNinja",
-    nickname: "@Shadow_CatNinja",
+    nickname: "Shadow_CatNinja",
     role: "Streamer",
     image: "/media/streamer-pf/Shadow_CatNinja.png",
     quote: "Sneaky as a cat, fast as a ninja.",
@@ -109,14 +109,14 @@ export const contentCreators = [
       },
       {
         icon: Youtube,
-        url: "https://www.youtube.com/@Shadow_CatNinja",
+        url: "https://www.youtube.com/Shadow_CatNinja",
         label: "YouTube",
       },
     ],
   },
   {
     name: "Ahmed",
-    nickname: "@theahmedhd",
+    nickname: "theahmedhd",
     role: "Streamer",
     image: "/media/streamer-pf/Ahmed.gif",
     quote: "Burns like fire",
@@ -125,14 +125,14 @@ export const contentCreators = [
       { icon: Twitch, url: "https://twitch.com/theahmedhd", label: "Twitch" },
       {
         icon: Youtube,
-        url: "https://youtube.com/@theahmedhd.",
+        url: "https://youtube.com/theahmedhd.",
         label: "YouTube",
       },
     ],
   },
   {
     name: "Jay",
-    nickname: "@zockenderdjay",
+    nickname: "zockenderdjay",
     role: "Streamer",
     image: "/media/streamer-pf/ZockenderDjay.png",
     quote:
@@ -151,12 +151,12 @@ export const contentCreators = [
       },
       {
         icon: Youtube,
-        url: "https://www.youtube.com/@zockenderdjay2373",
+        url: "https://www.youtube.com/zockenderdjay2373",
         label: "YouTube",
       },
       {
         icon: Globe,
-        url: "https://www.tiktok.com/@zockenderdjay",
+        url: "https://www.tiktok.com/zockenderdjay",
         label: "TikTok",
       },
     ],
@@ -166,7 +166,7 @@ export const contentCreators = [
 export const members = [
   {
     name: "Tamashii",
-    nickname: "@tamashiimon",
+    nickname: "tamashiimon",
     role: "Founder",
     image: "/media/team-pf/tamashii.png",
     quote: "I am not only a Staff but also a Player.",
@@ -179,14 +179,14 @@ export const members = [
       },
       {
         icon: Youtube,
-        url: "https://www.youtube.com/@TamashiiMon",
+        url: "https://www.youtube.com/TamashiiMon",
         label: "YouTube",
       },
     ],
   },
   {
     name: "Qeonix",
-    nickname: "@qeonix__",
+    nickname: "qeonix__",
     role: "Founder",
     image: "/media/team-pf/jonathan.png",
     quote: "I hate people 🌼",
@@ -195,7 +195,7 @@ export const members = [
   },
   {
     name: "Fotrapsy",
-    nickname: "@fotrapsy",
+    nickname: "fotrapsy",
     role: "Hidden Admin",
     image: "/media/team-pf/fotrapsy.png",
     quote: "There is not enough stupid in the world to describe me.",
@@ -204,7 +204,7 @@ export const members = [
   },
   {
     name: "Admiralbiber",
-    nickname: "@Biber_2005",
+    nickname: "Biber_2005",
     role: "Member",
     image: "/media/streamer-pf/Admiralbiber.png",
     quote: "I love the war",
@@ -213,7 +213,7 @@ export const members = [
   },
   {
     name: "Villagerzock",
-    nickname: "@Villagerzock",
+    nickname: "Villagerzock",
     role: "Creator",
     image: "/media/streamer-pf/Villagerzock.png",
     quote: " I dont use Arch",
@@ -228,7 +228,7 @@ export const members = [
   },
   {
     name: "SLINIcraftet204",
-    nickname: "@slinicraftet204",
+    nickname: "slinicraftet204",
     role: "Creator",
     image: "/media/streamer-pf/SLINIcraftet204.png",
     quote: "The sneezing Husky or slini ✌️",
@@ -253,7 +253,7 @@ export const members = [
   },
   {
     name: "Controller_Man",
-    nickname: "@controller_man",
+    nickname: "controller_man",
     role: "Member",
     image: "/media/streamer-pf/ControllerMan.png",
     quote: "I may be flat broke, but I’ll never be flat-coke.",
@@ -261,7 +261,7 @@ export const members = [
     socials: [
       {
         icon: Youtube,
-        url: "https://www.youtube.com/@Controller_Man17",
+        url: "https://www.youtube.com/Controller_Man17",
         label: "YouTube",
       },
     ],
@@ -271,7 +271,7 @@ export const members = [
 export const sponsors = [
   {
     name: "SyntaxJason",
-    nickname: "@syntaxjason",
+    nickname: "syntaxjason",
     role: "Partner",
     image: "/media/team-pf/SyntaxJson.png",
     quote: "n/a",
@@ -296,7 +296,7 @@ export const sponsors = [
   },
   {
     name: "Tikomatura",
-    nickname: "@Ynujasha",
+    nickname: "Ynujasha",
     role: "Former Sponsor",
     image: "/media/streamer-pf/Ynujasha.png",
     quote: "Day 2 Supporter\nHMU for cheap server hosting",

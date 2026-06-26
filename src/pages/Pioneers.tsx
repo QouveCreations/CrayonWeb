@@ -1,255 +1,141 @@
-import {
-  MessageCircle,
-  Star,
-  Sparkles,
-  Users,
-} from "lucide-react";
+import { MessageCircle, Star, Sparkles, Users } from "lucide-react";
 import { contentCreators, members, sponsors } from "../data/pioneers";
 
+// Import der Design-System & Layout-Komponenten
+import { CrayonButton } from ".././components/CrayonButton.tsx";
+import { CrayonCard } from ".././components/CrrayonCard.tsx";
+import { CrayonSectionHeader } from ".././components/CrayonSectionHeader.tsx";
+import { CrayonPersonalCard } from ".././components/CrayonPersonalCard.tsx"; // Neue Universal-Card
+
 function Pioneers() {
-
-
   return (
-    <main className="min-h-screen">
-      {/* Hero Section */}
-      <section className="pioneer-hero">
-        <div className="container mx-auto px-4 text-center">
-          <div data-aos="fade-down">
-            <Star className="w-16 h-16 mx-auto mb-4 text-[#f05689]" />
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6">
-              Our <span className="accent-gradient-text">Pioneers</span>
-            </h1>
-            <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto">
-              The trailblazers and content creators who help shape and grow the
-              CrayonSMP community.
-            </p>
+      <main className="min-h-screen pb-24">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden min-h-[45vh] flex items-center justify-center py-20 bg-gradient-to-b from-black/40 to-transparent">
+          <div className="container mx-auto px-4 text-center relative z-10">
+            <div data-aos="fade-down">
+              <Star className="w-16 h-16 mx-auto mb-4 text-[#f05689]" />
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white tracking-tight">
+                Our <span className="accent-gradient-text">Pioneers</span>
+              </h1>
+              <p className="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
+                The trailblazers and content creators who help shape and grow the
+                CrayonSMP community.
+              </p>
+            </div>
           </div>
+        </section>
+
+        <div className="container mx-auto px-4 space-y-28">
+
+          {/* Content Creators Section */}
+          <section id="content-creators">
+            <CrayonSectionHeader
+                icon={Sparkles}
+                iconColorClass="text-[#9735f2]"
+                title="Content Creators"
+                description="Streamers bringing CrayonSMP to audiences worldwide"
+            />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {contentCreators.map((member, index) => (
+                  <CrayonPersonalCard
+                      key={member.nickname}
+                      name={member.name}
+                      nickname={member.nickname}
+                      role={member.role}
+                      image={member.image}
+                      quote={member.quote}
+                      socials={member.socials}
+                      color={member.color}
+                      fallbackBgColor="9735f2"
+                      aosDelay={index * 100}
+                  />
+              ))}
+            </div>
+          </section>
+
+          {/* Community Section */}
+          <section id="community">
+            <CrayonSectionHeader
+                icon={Users}
+                iconColorClass="text-[#FF0040]"
+                title="Community"
+                description="Players and staff members enjoying the server"
+            />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {members.map((member, index) => (
+                  <CrayonPersonalCard
+                      key={member.nickname}
+                      name={member.name}
+                      nickname={member.nickname}
+                      role={member.role}
+                      image={member.image}
+                      quote={member.quote}
+                      socials={member.socials}
+                      color={member.color}
+                      fallbackBgColor="4d4848"
+                      aosDelay={index * 100}
+                  />
+              ))}
+            </div>
+          </section>
+
+          {/* Sponsors Section */}
+          <section id="sponsors">
+            <CrayonSectionHeader
+                icon={Star}
+                iconColorClass="text-[#3498db]"
+                title="Sponsors & Partners"
+                description="Supporting CrayonSMP's growth and development"
+            />
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {sponsors.map((member, index) => (
+                  <CrayonPersonalCard
+                      key={member.nickname}
+                      name={member.name}
+                      nickname={member.nickname}
+                      role={member.role}
+                      image={member.image}
+                      quote={member.quote}
+                      socials={member.socials}
+                      color={member.color}
+                      fallbackBgColor="3498db"
+                      aosDelay={index * 100}
+                  />
+              ))}
+            </div>
+          </section>
+
+          {/* Bewerbungs- / Join CTA */}
+          <section id="join-cta" className="max-w-4xl mx-auto">
+            <CrayonCard
+                accentBorder={true}
+                className="text-center p-8 md:p-12"
+                data-aos="fade-up"
+            >
+              <MessageCircle className="w-12 h-12 mx-auto mb-4 text-[#f05689]" />
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white tracking-tight">
+                Become Part of the Project!
+              </h2>
+              <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8 leading-relaxed">
+                Interested to join CrayonSMP? Then send us an application on our
+                Discord server!
+              </p>
+              <div className="flex justify-center">
+                <a href="https://discord.gg/M2M6m3j2Qf" target="_blank" rel="noreferrer">
+                  <CrayonButton variant="primary" icon={MessageCircle}>
+                    Join Discord
+                  </CrayonButton>
+                </a>
+              </div>
+            </CrayonCard>
+          </section>
+
         </div>
-      </section>
-
-      <div className="container mx-auto px-4 pb-16">
-        {/* Content Creators Section */}
-        <section className="mb-20">
-          <div className="team-section-header" data-aos="fade-up">
-            <Sparkles className="mt-8 w-8 h-8 text-[#9735f2]" />
-            <h2 className="text-3xl md:text-4xl font-bold">Content Creators</h2>
-            <p className="text-gray-400 mt-2">
-              Streamers bringing CrayonSMP to audiences worldwide
-            </p>
-          </div>
-
-          <div className="pioneer-grid">
-            {contentCreators.map((member, index) => (
-              <div
-                key={member.nickname}
-                className="pioneer-card-enhanced"
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-              >
-                <div
-                  className="pioneer-card-glow"
-                  style={{ backgroundColor: member.color }}
-                ></div>
-                <div
-                  className="pioneer-card-rank-badge"
-                  style={{ backgroundColor: member.color }}
-                >
-                  {member.role}
-                </div>
-                <div className="pioneer-card-avatar-wrapper">
-                  <img
-                    src={member.image}
-                    alt={`Profile Picture of ${member.name}`}
-                    className="pioneer-card-avatar"
-                    style={{ borderColor: member.color }}
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        "https://placehold.co/120x120/9735f2/ffffff?text=?";
-                    }}
-                  />
-                </div>
-                <h3 className="pioneer-card-name">{member.name}</h3>
-                <p className="pioneer-card-nickname">{member.nickname}</p>
-                <div className="pioneer-card-divider"></div>
-                <p className="pioneer-card-quote">"{member.quote}"</p>
-                <div className="pioneer-social-links">
-                  {member.socials.map((social, idx) => (
-                    <a
-                      key={idx}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      title={social.label}
-                      className="pioneer-social-icon"
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Community Section */}
-        <section className="mb-20">
-          <div className="team-section-header" data-aos="fade-up">
-            <Users className="w-8 h-8 text-[#FF0040]" />
-            <h2 className="text-3xl md:text-4xl font-bold">Community</h2>
-            <p className="text-gray-400 mt-2">
-              Players and staff members enjoying the server
-            </p>
-          </div>
-
-          <div className="pioneer-grid">
-            {members.map((member, index) => (
-              <div
-                key={member.nickname}
-                className="pioneer-card-enhanced"
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-              >
-                <div
-                  className="pioneer-card-glow"
-                  style={{ backgroundColor: member.color }}
-                ></div>
-                <div
-                  className="pioneer-card-rank-badge"
-                  style={{ backgroundColor: member.color }}
-                >
-                  {member.role}
-                </div>
-                <div className="pioneer-card-avatar-wrapper">
-                  <img
-                    src={member.image}
-                    alt={`Profile Picture of ${member.name}`}
-                    className="pioneer-card-avatar"
-                    style={{ borderColor: member.color }}
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        "https://placehold.co/120x120/4d4848/ffffff?text=?";
-                    }}
-                  />
-                </div>
-                <h3 className="pioneer-card-name">{member.name}</h3>
-                <p className="pioneer-card-nickname">{member.nickname}</p>
-                <div className="pioneer-card-divider"></div>
-                <p className="pioneer-card-quote">"{member.quote}"</p>
-                <div className="pioneer-social-links">
-                  {member.socials.map((social, idx) => (
-                    <a
-                      key={idx}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      title={social.label}
-                      className="pioneer-social-icon"
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Sponsors Section */}
-        <section className="mb-20">
-          <div className="team-section-header" data-aos="fade-up">
-            <Star className="w-8 h-8 text-[#3498db]" />
-            <h2 className="text-3xl md:text-4xl font-bold">
-              Sponsors & Partners
-            </h2>
-            <p className="text-gray-400 mt-2">
-              Supporting CrayonSMP's growth and development
-            </p>
-          </div>
-
-          <div className="pioneer-grid">
-            {sponsors.map((member, index) => (
-              <div
-                key={member.nickname}
-                className="pioneer-card-enhanced"
-                data-aos="zoom-in"
-                data-aos-delay={index * 100}
-              >
-                <div
-                  className="pioneer-card-glow"
-                  style={{ backgroundColor: member.color }}
-                ></div>
-                <div
-                  className="pioneer-card-rank-badge"
-                  style={{ backgroundColor: member.color }}
-                >
-                  {member.role}
-                </div>
-                <div className="pioneer-card-avatar-wrapper">
-                  <img
-                    src={member.image}
-                    alt={`Profile Picture of ${member.name}`}
-                    className="pioneer-card-avatar"
-                    style={{ borderColor: member.color }}
-                    onError={(e) => {
-                      e.currentTarget.onerror = null;
-                      e.currentTarget.src =
-                        "https://placehold.co/120x120/3498db/ffffff?text=?";
-                    }}
-                  />
-                </div>
-                <h3 className="pioneer-card-name">{member.name}</h3>
-                <p className="pioneer-card-nickname">{member.nickname}</p>
-                <div className="pioneer-card-divider"></div>
-                <p
-                  className="pioneer-card-quote"
-                  style={{ whiteSpace: "pre-line" }}
-                >
-                  "{member.quote}"
-                </p>
-                <div className="pioneer-social-links">
-                  {member.socials.map((social, idx) => (
-                    <a
-                      key={idx}
-                      href={social.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      title={social.label}
-                      className="pioneer-social-icon"
-                    >
-                      <social.icon className="w-5 h-5" />
-                    </a>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Join CTA */}
-        <section className="section-card text-center" data-aos="fade-up">
-          <MessageCircle className="w-12 h-12 mx-auto mb-4 text-[#f05689]" />
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Become Part of the Project!
-          </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto mb-8">
-            Interested to join CrayonSMP? Then send us an application on our
-            Discord server!
-          </p>
-          <a
-            href="https://discord.gg/M2M6m3j2Qf"
-            className="cta-button primary"
-          >
-            <MessageCircle className="w-5 h-5" />
-            <span>Join Discord</span>
-          </a>
-        </section>
-      </div>
-    </main>
+      </main>
   );
 }
 
